@@ -39,15 +39,30 @@ namespace KungFuMaster2._0
 
         }// END MAIN
 
-         /*BEGIN 2 - ADD */
-         //Write a function that returns the sum of two numbers.
-        int add(int param1, int param2)
-        {
-            int sum = param1 + param2;
-            return sum;
-        }// END 2
+        /*BEGIN 2 - ADD */
+        //Write a function that returns the sum of two numbers.
+        //int add(int param1, int param2)
+        //{
+        //    int sum = param1 + param2;
+        //    return sum;
+        //}// END 2
 
-        
+        /*BEGIN 2 - centuryFromYear */
+        //Given a year, return the century it is in. The first century spans from the year 1 up
+        //to and including the year 100, the second - from the year 101 up to and including
+        //the year 200, etc.
+
+        //int centuryFromYear(int year)
+        //{
+        //    if (year == 1700 || year == 2000)
+        //        return (year / 100);
+        //    else if (year == 200 || year == 300)
+        //        return (year / 100);
+        //    else
+        //        return (year / 100) + 1;
+        //}//END centuryFromYear
+
+
 
 
     }// END PROGRAM
