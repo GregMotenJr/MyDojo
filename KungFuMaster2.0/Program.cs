@@ -36,7 +36,7 @@ namespace KungFuMaster2._0
             //    return result;
             //}//END   Add
             /*END 1-FUNCTION TESTS*/
-
+           
         }// END MAIN
 
         /*BEGIN 2 - ADD */
@@ -62,9 +62,31 @@ namespace KungFuMaster2._0
         //        return (year / 100) + 1;
         //}//END centuryFromYear
 
+        /*BEGIN 3 - checkPalindrome */
+        //Given the string, check if it is a palindrome.
 
+        bool checkPalindrome(string inputString)
+        {
+            string input = inputString;
+            string output = "";
+            for (int i = input.Length - 1; i >= 0; i--)
+            {
+                output += input[i];
+            }
+
+            if (input == output)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }// END checkPalindrome
 
 
     }// END PROGRAM
+
 }
 
