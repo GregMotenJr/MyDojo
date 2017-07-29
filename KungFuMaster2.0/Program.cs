@@ -10,71 +10,42 @@ namespace KungFuMaster2._0
     {
         static void Main(string[] args)
         {/*The Apprentice Soon Shall Become The Master*/
-         //Console.WriteLine("Hello, World!");
-         //Console.ReadKey();
-         //END SETUP
+            ///Check to see if a string has the same amount of 'x's and 'o's. 
+            ///The method must return a boolean and be case insensitive. 
+            ///The string can contains any char.
 
-            /*BEGIN 1-FUNCTION TESTS*/
-            //    int a;
-            //    int b;
-            //    int c;
+            string source = "apo";
+            //int countX = 0;
+            //int countY = 0;
+            var countX = source.ToLower().Count(x => x == 'x');
+            var countY = source.ToLower().Count(x => x == 'y');
 
-            //    Console.WriteLine("Enter value of 'a':");
-            //    a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Their are {0} X's and {1} Y's", countX, countY);
+            //while (countX < source.ToLower().Length && source[countX] == 'x') countX++;
+            //while (countY < source.ToLower().Length && source[countY] == 'y') countY++;
 
-            //    Console.WriteLine("Enter value of 'b':");
-            //    b = Convert.ToInt32(Console.ReadLine());
-
-            //    //why can't I not use it this way?
-            //    c = Add(a, b);
-            //    Console.WriteLine("a + b = {0}", c);
-            //}//END   Main
-
-            //static public int Add(int x, int y)
-            //{
-            //    int result = x + y;
-            //    return result;
-            //}//END   Add
-            /*END 1-FUNCTION TESTS*/
-           
-        }// END MAIN
-
-        /*BEGIN 2 - ADD */
-        //Write a function that returns the sum of two numbers.
-        //int add(int param1, int param2)
-        //{
-        //    int sum = param1 + param2;
-        //    return sum;
-        //}// END 2
-
-        /*BEGIN 2 - centuryFromYear */
-        //Given a year, return the century it is in. The first century spans from the year 1 up
-        //to and including the year 100, the second - from the year 101 up to and including
-        //the year 200, etc.
-
-        //int centuryFromYear(int year)
-        //{
-        //    if (year == 1700 || year == 2000)
-        //        return (year / 100);
-        //    else if (year == 200 || year == 300)
-        //        return (year / 100);
-        //    else
-        //        return (year / 100) + 1;
-        //}//END centuryFromYear
-
-        /*BEGIN 3 - checkPalindrome */
-        //Given the string, check if it is a palindrome.
-
-        bool checkPalindrome(string inputString)
-        {
-            string input = inputString;
-            string output = "";
-            for (int i = input.Length - 1; i >= 0; i--)
+            if (countX == countY)
             {
-                output += input[i];
+                Console.WriteLine("X and Y are equal");
             }
+            else
+            {
+                Console.WriteLine("X and Y are not equal");
+            }
+            Console.ReadKey();
+        }
 
-            if (input == output)
+        ///the finished code
+        public static bool XO(string input)
+        {
+            //Establish Variables, convert the string to lowercase then 
+            //go through the string and count the X and O chars
+
+            var countX = input.ToLower().Count(x => x == 'x');
+            var countO = input.ToLower().Count(x => x == 'o');
+
+            //Comparing the values to see if they are equal 
+            if (countX == countO)
             {
                 return true;
             }
@@ -83,10 +54,7 @@ namespace KungFuMaster2._0
                 return false;
             }
 
-        }// END checkPalindrome
+        }
 
-
-    }// END PROGRAM
-
+    }
 }
-
