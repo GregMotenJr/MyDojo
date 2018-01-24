@@ -14,64 +14,21 @@ namespace KungFuMaster2._0
     {
         static void Main(string[] args)
         {
-            ///Title: Words from text
+            ///Title: WeIrD StRiNg CaSe
 
             ///Instructions:
 
             /*
-             * Generate a count of the occurrences of each word for this text. 
-             * Output a list of words and counts in descending count order
-             * (word with highest count listed first)
+            Write a function toWeirdCase (weirdcase in Ruby) that accepts a string, and returns the same string with all even indexed characters in 
+            each word upper cased, and all odd indexed characters in each word lower cased. The indexing just explained is zero based, so the zero-ith 
+            index is even, therefore that character should be upper cased.
+
+            The passed in string will only consist of alphabetical characters and spaces(' '). Spaces will only be present if there are multiple words. 
+            Words will be separated by a single space(' ').
              */
 
-            //Establish initial variables
-            string srcFile = ("C:\\Users\\jiggy\\OneDrive\\Documents\\Visual Studio 2015\\Projects\\testing\\testing\\text.txt");
-            string input = File.ReadAllText(srcFile);
-
-            //Make case Insensitive
-            input = input.ToLower();
-
-            //Remove certain chars
-            string[] removeChars = { ";", ",", ".", "-", "_", "^", "(", ")", "[", "]",
-                        "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "\n", "\t", "\r" };
-            foreach (string character in removeChars)
-            {
-                input = input.Replace(character, "");
-            }
-
-            //Create a List of the words
-            List<string> wordList = input.Split(' ').ToList();
-
-
-            //Create a new Dictionary of the words and their count
-            Dictionary<string, int> dictionary = new Dictionary<string, int>();
-
-            foreach (string word in wordList)
-            {
-                if (dictionary.ContainsKey(word))
-                {
-                    dictionary[word]++;
-                }
-                else
-                {
-                    dictionary[word] = 1;
-                }
-            }
-
-            //Sort by descending value
-            var sortedDictionary = (from entry in dictionary orderby entry.Value descending select entry).ToDictionary(pair => pair.Key, pair => pair.Value);
-
-            //output the results
-            int count = 1;
-            foreach (KeyValuePair<string, int> pair in sortedDictionary)
-            {
-                Console.WriteLine("{0}: The word \"{1}\" is shown {2} times", count, pair.Key, pair.Value);
-                count++;
-            }
-
-            Console.ReadKey();
+            Kata.ToWeirdCase("this is a test");
 
         }//END Main
-
-    }//END Program
-}
+}//END Program
+}//END NameSpace
