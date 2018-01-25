@@ -14,20 +14,18 @@ namespace KungFuMaster2._0
     {
         static void Main(string[] args)
         {
-            ///Title: WeIrD StRiNg CaSe
+            ///Title: Regex validate PIN code
 
             ///Instructions:
 
-            /*
-            Write a function toWeirdCase (weirdcase in Ruby) that accepts a string, and returns the same string with all even indexed characters in 
-            each word upper cased, and all odd indexed characters in each word lower cased. The indexing just explained is zero based, so the zero-ith 
-            index is even, therefore that character should be upper cased.
-
-            The passed in string will only consist of alphabetical characters and spaces(' '). Spaces will only be present if there are multiple words. 
-            Words will be separated by a single space(' ').
+            /*           
+             * ATM machines allow 4 or 6 digit PIN codes and PIN codes cannot contain anything but 
+             * exactly 4 digits or exactly 6 digits.
+             * If the function is passed a valid PIN string, return true, else return false.
              */
 
-            Kata.ToWeirdCase("this is a test");
+            Kata.ValidatePin(".234");
+            Console.ReadKey();
 
         }//END Main
 }//END Program

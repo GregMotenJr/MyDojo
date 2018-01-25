@@ -8,47 +8,48 @@ namespace KungFuMaster2._0
 {
     class Kata
     {
-        public static string ToWeirdCase(string s)
+        public static bool ValidatePin(string pin)
         {
-            string sUpper;
-            List<string> upperList = new List<string>();
+            ///loop though pin
+            ///ValidatePin should return false for pins with length other than 4 or 6 = passed
+            ///ValidatePin should return false for pins which contain characters other than digits = passed
+            ///ValidatePin should return true for valid pins = failed
 
-            string[] words = s.Split(' ');
-            for (int i = 0; i < words.Length; i++)
+            bool result = true;
+
+            foreach (var item in pin)
             {
-                upperList.Add(sUpper = words[i].ToUpper());
-            }
-
-            int count = 0;
-            string temp = "";
-
-            StringBuilder sb = new StringBuilder();
-
-            for (int i = 0; i < upperList.Count; i++)
-            {
-                count = 0;
-
-                foreach (var indice in upperList[i])
+                if (pin.Length == 4)
                 {
-                    if (count % 2 == 0)
+                    if (char.IsDigit(item) == true)
                     {
-                        sb.Append(indice);
-                        count++;
+                        result = true;
                     }
-
                     else
                     {
-                        temp = indice.ToString().ToLower();
-                        sb.Append(temp);
-                        count++;
+                        result = false;
+                        break;
                     }
                 }
-                sb.Append(" ");
+                else if (pin.Length == 6)
+                {
+                    if (char.IsDigit(item) == true)
+                    {
+                        result = true;
+                    }
+                    else
+                    {
+                        result = false;
+                        break;
+                    }
+                }
+                else///PIN isnt exactly 4 or 6
+                {
+                    result = false;
+                    break;
+                }
             }
-
-            sb.Remove(sb.Length - 1, 1);
-            return (sb.ToString());
+            return result;
         }
     }
-
 }
