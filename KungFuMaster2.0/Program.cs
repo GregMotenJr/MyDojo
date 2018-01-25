@@ -24,9 +24,8 @@ namespace KungFuMaster2._0
              * If the function is passed a valid PIN string, return true, else return false.
              */
 
-            Kata.ValidatePin(".234");
             Console.ReadKey();
 
         }//END Main
-}//END Program
+    }//END Program
 }//END NameSpace
