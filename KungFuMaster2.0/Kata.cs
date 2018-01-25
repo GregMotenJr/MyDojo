@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,49 +7,28 @@ using System.Threading.Tasks;
 
 namespace KungFuMaster2._0
 {
-    class Kata
+    public class ListFilterer
     {
-        public static string ToWeirdCase(string s)
+        /// <summary>
+        /// create a function that takes a list of non-negative integers and strings 
+        /// and returns a new list with the strings filtered out.
+        /// </summary>
+        /// <param name="listOfItems"></param>
+        /// <returns></returns>
+        /// 
+        public static IEnumerable<int> GetIntegersFromList(List<object> listOfItems)
         {
-            string sUpper;
-            List<string> upperList = new List<string>();
+            IList<int> newList = new List<int>();
 
-            string[] words = s.Split(' ');
-            for (int i = 0; i < words.Length; i++)
+            foreach (var obj in listOfItems)
             {
-                upperList.Add(sUpper = words[i].ToUpper());
-            }
-
-            int count = 0;
-            string temp = "";
-
-            StringBuilder sb = new StringBuilder();
-
-            for (int i = 0; i < upperList.Count; i++)
-            {
-                count = 0;
-
-                foreach (var indice in upperList[i])
+                if (obj.GetType() == typeof(int))
                 {
-                    if (count % 2 == 0)
-                    {
-                        sb.Append(indice);
-                        count++;
-                    }
-
-                    else
-                    {
-                        temp = indice.ToString().ToLower();
-                        sb.Append(temp);
-                        count++;
-                    }
+                    ///add to new list
+                    newList.Add(Convert.ToInt32(obj));
                 }
-                sb.Append(" ");
             }
-
-            sb.Remove(sb.Length - 1, 1);
-            return (sb.ToString());
+            return newList;
         }
     }
-
 }

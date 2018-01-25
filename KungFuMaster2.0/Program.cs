@@ -14,21 +14,12 @@ namespace KungFuMaster2._0
     {
         static void Main(string[] args)
         {
-            ///Title: WeIrD StRiNg CaSe
+            ///Title: List Filtering
 
             ///Instructions:
-
-            /*
-            Write a function toWeirdCase (weirdcase in Ruby) that accepts a string, and returns the same string with all even indexed characters in 
-            each word upper cased, and all odd indexed characters in each word lower cased. The indexing just explained is zero based, so the zero-ith 
-            index is even, therefore that character should be upper cased.
-
-            The passed in string will only consist of alphabetical characters and spaces(' '). Spaces will only be present if there are multiple words. 
-            Words will be separated by a single space(' ').
-             */
-
-            Kata.ToWeirdCase("this is a test");
+            ///In this kata you will create a function that takes a list of non-negative integers and strings 
+            ///and returns a new list with the strings filtered out.
 
         }//END Main
-}//END Program
+    }//END Program
 }//END NameSpace
