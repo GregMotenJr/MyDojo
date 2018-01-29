@@ -14,18 +14,18 @@ namespace KungFuMaster2._0
     {
         static void Main(string[] args)
         {
-            ///Title: Regex validate PIN code
+            ///Title: Detect Pangram
 
             ///Instructions:
 
             /*           
-             * ATM machines allow 4 or 6 digit PIN codes and PIN codes cannot contain anything but 
-             * exactly 4 digits or exactly 6 digits.
-             * If the function is passed a valid PIN string, return true, else return false.
+             * A pangram is a sentence that contains every single letter of the alphabet at least once. For example, 
+             * the sentence "The quick brown fox jumps over the lazy dog" is a pangram, because it uses the letters A-Z at least once (case is irrelevant).
+             * Given a string, detect whether or not it is a pangram. Return True if it is, False if not. Ignore numbers and punctuation.
              */
 
             Console.ReadKey();
-
         }//END Main
+
     }//END Program
 }//END NameSpace
