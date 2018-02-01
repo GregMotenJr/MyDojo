@@ -11,11 +11,6 @@ namespace KungFuMaster2._0
     [TestFixture]
     public class KataTests
     {
-        [Test]
-        public void SampleTests()
-        {
-            Assert.AreEqual(true, Kata.IsPangram("The quick brown fox jumps over the lazy dog."));
-        }
-
+       // 
     }//END TEST CLASS
 }//END NAMESPACE

@@ -5,9 +5,17 @@ using System.Text.RegularExpressions;
 
 public class Kata
 {
-    public static bool IsPangram(string str)
+    int adjacentElementsProduct(int[] inputArray)
     {
-        return str.ToLower().Where(c => Char.IsLetter(c)).GroupBy(c => c).Count() == 26;
+        List<int> inputList = new List<int>();
+        for (int I = 0; I < inputArray.Length; I++)
+        {
+            var result = inputArray[I] + inputArray[I + 1];
+            inputList.Add(result);
+        }
+        inputList.Sort();
+        inputList.Reverse();
+        return inputList[0];
     }
 
 }//END KATA CLASS
