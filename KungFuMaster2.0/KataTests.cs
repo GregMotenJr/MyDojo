@@ -8,9 +8,5 @@ using System.Threading.Tasks;
 
 namespace KungFuMaster2._0
 {
-    [TestFixture]
-    public class KataTests
-    {
-       // 
-    }//END TEST CLASS
+    
 }//END NAMESPACE
